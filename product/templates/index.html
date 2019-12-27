@@ -1,0 +1,21 @@
+{% extends 'bases.html '%}
+{% block content %}
+
+<div class="row" style="padding : 1.5rem;">
+    {% for product in products %}
+    <div class=" col" style="padding: 1rem;">
+        <div class="card" style="width: 18rem; ">
+            <img src="{{ product.image_url.url }}" class="card-img-top" style="height:9rem; width : 10rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.name}}</h5>
+                <p class="card-text">${{ product.price }}</p>
+                <a href="#" class="btn btn-primary">Add to card</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+
